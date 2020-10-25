@@ -1,5 +1,6 @@
 package com.comp322olivet.tipcalculator;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,7 +19,7 @@ tip_percent REAL
 
 public class TipDB {
 
-    public static final String  DB_NAME = "tip.db";
+    public static final String  DB_NAME = "tipDB.db";
     public static final int     DB_VERSION = 1;
 
     public static final String  TIP_TABLE = "tip";
@@ -37,20 +38,19 @@ public class TipDB {
 
     public static final String CREATE_TIP_TABLE =
             "CREATE TABLE " + TIP_TABLE + " (" +
-                    TIP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    BILL_DATE + " INTEGER, " +
-                    BILL_AMOUNT + " REAL, " +
-                    TIP_PERCENT + " REAL);";
+            TIP_ID      + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            BILL_DATE   + " INTEGER, " +
+            BILL_AMOUNT + " REAL, " +
+            TIP_PERCENT + " REAL);";
 
     public static final String DROP_TIP_TABLE =
             "DROP TABLE IF EXISTS " + TIP_TABLE;
 
-    public static class DBHelper extends SQLiteOpenHelper {
+    private static class DBHelper extends SQLiteOpenHelper {
 
         public DBHelper(Context context, String name,
                         CursorFactory factory, int version) {
             super(context, name, factory, version);
-
         }
 
         @Override
@@ -60,7 +60,7 @@ public class TipDB {
 
             db.execSQL("INSERT INTO tip VALUES (1, 0, 40.60, .15)");
 
-            db.execSQL("INSERT INTO tip VALUES (1, 0, 420.69, .69)");
+            db.execSQL("INSERT INTO tip VALUES (2, 0, 420.69, .69)");
         }
 
         @Override
@@ -97,17 +97,24 @@ public class TipDB {
     }
 
     public ArrayList<Tip> getTips() {
-        ArrayList<Tip> tips = new ArrayList<Tip>();
+
+        ArrayList<Tip> tips = new ArrayList<>();
+
         openReadableDB();
         Cursor cursor = db.query(TIP_TABLE, null, null,
                 null, null, null, null);
 
         while (cursor.moveToNext()) {
+            /*
             Tip tip = new Tip();
             tip.setId(cursor.getInt(TIP_ID_COL));
             tip.setDateMillis(cursor.getInt(BILL_DATE_COL));
             tip.setBillAmount(cursor.getInt(BILL_AMOUNT_COL));
             tip.setTipPercent(cursor.getInt(TIP_PERCENT_COL));
+             */
+
+            Tip tip = new Tip(cursor.getLong(TIP_ID_COL), cursor.getLong(BILL_DATE_COL),
+                    cursor.getFloat(BILL_AMOUNT_COL), cursor.getFloat(TIP_PERCENT_COL));
 
             tips.add(tip);
         }
