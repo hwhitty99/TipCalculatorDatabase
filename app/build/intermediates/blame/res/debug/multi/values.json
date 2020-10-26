@@ -11,14 +11,7 @@
                     "endOffset": 102
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 1,
-                        "startColumn": 4,
-                        "startOffset": 17,
-                        "endColumn": 51,
-                        "endOffset": 64
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 135
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 257,
-                        "endColumn": 40,
-                        "endOffset": 293
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 193
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 198,
-                        "endColumn": 57,
-                        "endOffset": 251
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 232
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 441,
-                        "endColumn": 38,
-                        "endOffset": 475
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 271
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 401,
-                        "endColumn": 38,
-                        "endOffset": 435
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -106,14 +71,7 @@
                     "endOffset": 322
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 144,
-                        "endColumn": 50,
-                        "endOffset": 190
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -121,17 +79,17 @@
                     "startLine": 8,
                     "startColumn": 4,
                     "startOffset": 327,
-                    "endColumn": 44,
-                    "endOffset": 367
+                    "endColumn": 45,
+                    "endOffset": 368
                 },
                 "from": {
                     "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 537,
-                        "endColumn": 44,
-                        "endOffset": 577
+                        "startOffset": 687,
+                        "endColumn": 45,
+                        "endOffset": 728
                     }
                 }
             },
@@ -139,133 +97,96 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 372,
-                    "endColumn": 48,
-                    "endOffset": 416
+                    "startOffset": 373,
+                    "endColumn": 44,
+                    "endOffset": 413
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 487,
-                        "endColumn": 48,
-                        "endOffset": 531
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 421,
-                    "endColumn": 43,
-                    "endOffset": 460
+                    "startOffset": 418,
+                    "endColumn": 48,
+                    "endOffset": 462
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 356,
-                        "endColumn": 43,
-                        "endOffset": 395
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 465,
-                    "endColumn": 53,
-                    "endOffset": 514
+                    "startOffset": 467,
+                    "endColumn": 43,
+                    "endOffset": 506
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 301,
-                        "endColumn": 53,
-                        "endOffset": 350
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 519,
-                    "endColumn": 72,
-                    "endOffset": 587
+                    "startOffset": 511,
+                    "endColumn": 53,
+                    "endOffset": 560
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 70,
-                        "endColumn": 72,
-                        "endOffset": 138
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 592,
-                    "endColumn": 46,
-                    "endOffset": 634
+                    "startOffset": 565,
+                    "endColumn": 72,
+                    "endOffset": 633
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 639,
-                        "endColumn": 46,
-                        "endOffset": 681
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 639,
-                    "endColumn": 52,
-                    "endOffset": 687
+                    "startOffset": 638,
+                    "endColumn": 46,
+                    "endOffset": 680
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 585,
-                        "endColumn": 52,
-                        "endOffset": 633
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 692,
-                    "endColumn": 76,
-                    "endOffset": 764
+                    "startOffset": 685,
+                    "endColumn": 52,
+                    "endOffset": 733
                 },
                 "from": {
-                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 19,
-                        "endColumn": 77,
-                        "endOffset": 92
-                    }
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 738,
+                    "endColumn": 76,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "C:\\Users\\thewh\\Documents\\Olivet Documents\\COMP-322\\Assignment ZIPs\\TipCalculator\\app\\src\\main\\res\\values\\styles.xml"
                 }
             }
         ]

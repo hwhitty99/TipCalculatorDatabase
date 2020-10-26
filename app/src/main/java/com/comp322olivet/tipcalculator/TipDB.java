@@ -105,14 +105,6 @@ public class TipDB {
                 null, null, null, null);
 
         while (cursor.moveToNext()) {
-            /*
-            Tip tip = new Tip();
-            tip.setId(cursor.getInt(TIP_ID_COL));
-            tip.setDateMillis(cursor.getInt(BILL_DATE_COL));
-            tip.setBillAmount(cursor.getInt(BILL_AMOUNT_COL));
-            tip.setTipPercent(cursor.getInt(TIP_PERCENT_COL));
-             */
-
             Tip tip = new Tip(cursor.getLong(TIP_ID_COL), cursor.getLong(BILL_DATE_COL),
                     cursor.getFloat(BILL_AMOUNT_COL), cursor.getFloat(TIP_PERCENT_COL));
 
@@ -126,4 +118,39 @@ public class TipDB {
 
         return tips;
     }
+
+    public Tip getRecentTip() {
+
+        openReadableDB();
+        Cursor cursor = db.query(TIP_TABLE, null, null,
+                null, null, null, null);
+        cursor.moveToLast();
+
+        Tip tip = new Tip(cursor.getLong(TIP_ID_COL), cursor.getLong(BILL_DATE_COL),
+                cursor.getFloat(BILL_AMOUNT_COL), cursor.getFloat(TIP_PERCENT_COL));
+
+        if (cursor != null) {
+            cursor.close();
+        }
+        closeDB();
+
+        return tip;
+    }
+
+    public void saveTip(Tip tip) {
+        ContentValues cv = new ContentValues();
+        cv.put(BILL_DATE, tip.getDateMillis());
+        cv.put(BILL_AMOUNT, tip.getBillAmount());
+        cv.put(TIP_PERCENT, tip.getTipPercent());
+
+        this.openWritableDB();
+        db.insert(TIP_TABLE, null, cv);
+        this.closeDB();
+    }
+
+    public long getAvgTP() {
+        String columns[] = {"AVG(" + TIP_PERCENT + ")"};
+        
+    }
+
 }

@@ -15,5 +15,6 @@
     <string name="tip_amount">$0.00</string>
 
     <string name="total_amount_label">Total</string>
-    <string name="total_amount">$0.00</string>    
+    <string name="total_amount">$0.00</string>
+    <string name="save_tip">Save Tip</string>
 </resources>

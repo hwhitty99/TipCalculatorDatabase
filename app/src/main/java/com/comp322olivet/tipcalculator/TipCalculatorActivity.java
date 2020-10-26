@@ -1,9 +1,11 @@
 package com.comp322olivet.tipcalculator;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +17,8 @@ import android.widget.TextView.OnEditorActionListener;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+
+import static android.content.ContentValues.TAG;
 
 public class TipCalculatorActivity extends Activity 
 implements OnEditorActionListener, OnClickListener {
@@ -30,15 +34,16 @@ implements OnEditorActionListener, OnClickListener {
     // define instance variables that should be saved
     private String billAmountString = "";
     private float tipPercent = .15f;
-    
+    private long nSaves = 0;
+
     // set up preferences
     private SharedPreferences prefs;
-    
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip_calculator);
-        
+
         // get references to the widgets
         billAmountEditText = (EditText) findViewById(R.id.billAmountEditText);
         percentTextView = (TextView) findViewById(R.id.percentTextView);
@@ -59,9 +64,10 @@ implements OnEditorActionListener, OnClickListener {
     @Override
     public void onPause() {
         // save the instance variables       
-        Editor editor = prefs.edit();        
+        Editor editor = prefs.edit();
         editor.putString("billAmountString", billAmountString);
         editor.putFloat("tipPercent", tipPercent);
+        editor.putLong("nSaves", nSaves);
         editor.commit();        
 
         super.onPause();      
@@ -70,16 +76,29 @@ implements OnEditorActionListener, OnClickListener {
     @Override
     public void onResume() {
         super.onResume();
-        
+
         // get the instance variables
         billAmountString = prefs.getString("billAmountString", "");
         tipPercent = prefs.getFloat("tipPercent", 0.15f);
+        nSaves = prefs.getLong("nSaves", 0);
 
         // set the bill amount on its widget
         billAmountEditText.setText(billAmountString);
         
         // calculate and display
         calculateAndDisplay();
+
+        StringBuilder sb = new StringBuilder();
+
+        TipDB db = new TipDB(this);
+        ArrayList<Tip> tips = db.getTips();
+        for (Tip t : tips) {
+            sb.append(t.getId() + "|" + t.getDateMillis() + "|" + t.getBillAmount()
+                    + "|" + t.getTipPercent() + "\n");
+        }
+        Log.d(TAG, sb.toString());
+
+        Log.d(TAG, db.getRecentTip().getDateStringFormatted() + "\n");
     }
     
     public void calculateAndDisplay() {        
@@ -128,5 +147,12 @@ implements OnEditorActionListener, OnClickListener {
             calculateAndDisplay();
             break;
         }
+    }
+
+    public void saveTip(View view) {
+        TipDB db = new TipDB(this);
+        Tip tip = new Tip(nSaves, System.currentTimeMillis(), Float.parseFloat(billAmountString), tipPercent);
+        nSaves++;
+        db.saveTip(tip);
     }
 }
