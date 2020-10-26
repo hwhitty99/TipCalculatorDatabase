@@ -88,17 +88,27 @@ implements OnEditorActionListener, OnClickListener {
         // calculate and display
         calculateAndDisplay();
 
+        //string builder used for displaying tips in Logcat
         StringBuilder sb = new StringBuilder();
 
+        //database object for array list and logcat
         TipDB db = new TipDB(this);
+
+        //used to create String that goes to logcat
         ArrayList<Tip> tips = db.getTips();
+
+        //appends all tips to string builder
         for (Tip t : tips) {
             sb.append(t.getId() + "|" + t.getDateMillis() + "|" + t.getBillAmount()
                     + "|" + t.getTipPercent() + "\n");
         }
-        Log.d(TAG, sb.toString());
 
+        //displays all tips
+        Log.d(TAG, sb.toString());
+        //displays formatted date of most recent tip
         Log.d(TAG, db.getRecentTip().getDateStringFormatted() + "\n");
+        //displays average tip percentage
+        Log.d(TAG, Float.toString(db.getAverage()));
     }
     
     public void calculateAndDisplay() {        
@@ -149,10 +159,27 @@ implements OnEditorActionListener, OnClickListener {
         }
     }
 
+    //called when saveButton gets clicked
     public void saveTip(View view) {
+
+        //in case user clicks save before confirming the amount entered
+        calculateAndDisplay();
         TipDB db = new TipDB(this);
+
+        //create new tip object with the current amounts on screen
         Tip tip = new Tip(nSaves, System.currentTimeMillis(), Float.parseFloat(billAmountString), tipPercent);
+
+        //increments number of saved tips
         nSaves++;
+
+        //saves tip to database
         db.saveTip(tip);
+
+        //resets the bill amount
+        billAmountEditText.setText("");
+
+        //sets new tip percentage to the current average
+        tipPercent = db.getAverage();
+        calculateAndDisplay();
     }
 }
